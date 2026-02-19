@@ -73,6 +73,19 @@ export default async function Home() {
             <p>Alle Preise pro Kugel. Angaben ohne Gewähr.</p>
           </footer>
         </div>
+
+        <a
+          href="https://kaigent.de"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-3 right-3 opacity-40 hover:opacity-80 transition-opacity"
+        >
+          <img
+            src="/kaigent_logo.avif"
+            alt="KAIgent"
+            className="h-8 w-auto"
+          />
+        </a>
       </div>
     </div>
   );
