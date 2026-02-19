@@ -1,22 +1,26 @@
 -- CreateTable
 CREATE TABLE "Flavor" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
-    "price" REAL NOT NULL,
+    "price" DOUBLE PRECISION NOT NULL,
     "ingredients" TEXT NOT NULL DEFAULT '',
     "additives" TEXT NOT NULL DEFAULT '',
     "allergens" TEXT NOT NULL DEFAULT '',
     "available" BOOLEAN NOT NULL DEFAULT true,
     "sortOrder" INTEGER NOT NULL DEFAULT 0,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Flavor_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "User" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "username" TEXT NOT NULL,
-    "password" TEXT NOT NULL
+    "password" TEXT NOT NULL,
+
+    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
