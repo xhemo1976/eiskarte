@@ -83,7 +83,7 @@ export default async function Home() {
           <img
             src="/kaigent_logo.avif"
             alt="KAIgent"
-            className="h-8 w-auto"
+            className="h-14 w-auto"
           />
         </a>
       </div>
